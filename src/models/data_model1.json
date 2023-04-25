@@ -1,0 +1,23 @@
+{
+  "name": "String Hash",
+  "fields": {
+      "string1": {
+          "label": "String 1",
+          "type": "string",
+          "readOnly": false,
+          "calculate": null
+      },
+      "string2": {
+          "label": "String 2",
+          "type": "string",
+          "readOnly": false,
+          "calculate": null
+      },
+      "hash": {
+          "label": "Hash",
+          "type": "string",
+          "readOnly": true,
+          "calculate": "(ctx) => { return ctx.CryptoJS.SHA256(string1 + '|' + string2).toString();}"
+      }
+  }
+}
